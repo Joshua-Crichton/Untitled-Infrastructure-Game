@@ -1,13 +1,13 @@
 extends CanvasGroup
 
-const building_exterior_scene: PackedScene = \
-preload("res://Buildings/building_exterior.tscn")
-#Maybe avoid preloading, keeps node in memory even after use
+const building_exterior_scene: PackedScene = preload("res://Buildings/building_exterior.tscn")
 
 var player_entered_count: int = 0
 var alpha_modulation_velocity = 5
 var building_parts_dict: Dictionary[Vector2i,Area2D]
 
+var building_part = building_exterior_scene.instantiate()
+var building_part_2 = building_exterior_scene.instantiate()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
@@ -22,13 +22,11 @@ func _process(delta: float) -> void:
 		modulate.a = clampf(modulate.a-alpha_modulation_velocity*delta,0,1)
 	else:
 		modulate.a = clampf(modulate.a+alpha_modulation_velocity*delta,0,1)
-	if Input.is_action_just_pressed("select"):
-		add_building_part_on_click(get_global_mouse_position())
 
-func _building_part_entered(_area: Area2D):
+func _building_part_entered(area: Area2D):
 	player_entered_count+=1
 
-func _building_part_exited(_area: Area2D):
+func _building_part_exited(area: Area2D):
 	player_entered_count-=1
 
 func add_building_part(grid_position: Vector2i) -> void:
@@ -36,19 +34,12 @@ func add_building_part(grid_position: Vector2i) -> void:
 		if already_placed_part == grid_position:
 			print("Part already placed here: "+ str(grid_position))
 			return
-	building_parts_dict[grid_position] = \
-	building_exterior_scene.instantiate()
-	
+	building_parts_dict[grid_position] = building_exterior_scene.instantiate()
 	building_parts_dict[grid_position].position = \
 	Global.grid_2_coordinates(grid_position)
-	
 	building_parts_dict[grid_position].connect("area_entered",_building_part_entered)
 	building_parts_dict[grid_position].connect("area_exited",_building_part_exited)
-	
 	add_child(building_parts_dict[grid_position])
-	
-func add_building_part_on_click(coordinate_position: Vector2):
-	add_building_part(Global.coordinates_2_grid(coordinate_position))
 	
 
 	
