@@ -6,8 +6,6 @@ var player_entered_count: int = 0
 var alpha_modulation_velocity = 5
 var building_parts_dict: Dictionary[Vector2i,Area2D]
 
-var building_part = building_exterior_scene.instantiate()
-var building_part_2 = building_exterior_scene.instantiate()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	

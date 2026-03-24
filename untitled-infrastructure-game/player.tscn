@@ -12,6 +12,7 @@ colors = PackedColorArray(1, 0, 0, 1, 1, 0.45882353, 1, 1)
 gradient = SubResource("Gradient_xhfnw")
 
 [node name="player" type="Area2D" unique_id=1137493522]
+process_mode = 1
 collision_mask = 3
 script = ExtResource("1_4flbx")
 metadata/_edit_group_ = true
