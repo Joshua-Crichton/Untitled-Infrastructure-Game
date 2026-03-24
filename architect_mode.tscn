@@ -8,6 +8,8 @@
 gradient = SubResource("Gradient_li5kh")
 
 [node name="architect_mode" type="Node2D" unique_id=1233521065]
+process_mode = 4
+visible = false
 script = ExtResource("1_li5kh")
 metadata/_edit_group_ = true
 

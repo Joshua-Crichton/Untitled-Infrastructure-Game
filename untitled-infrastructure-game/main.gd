@@ -11,5 +11,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	start_or_stop_architecture_mode()
 	
+func start_or_stop_architecture_mode():
+	if Input.is_action_just_pressed("switch_to_architecture_mode")\
+	and $architect_mode.process_mode == Node.PROCESS_MODE_PAUSABLE:
+		print("Architecture Stopped")
+		$architect_mode.hide()
+		$architect_mode.process_mode = Node.PROCESS_MODE_DISABLED
+	elif Input.is_action_just_pressed("switch_to_architecture_mode")\
+	and $architect_mode.process_mode == Node.PROCESS_MODE_DISABLED:
+		print("Architecture Started")
+		$architect_mode.show()
+		$architect_mode.process_mode = Node.PROCESS_MODE_PAUSABLE
