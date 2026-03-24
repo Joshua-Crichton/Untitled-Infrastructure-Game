@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://xnefov2ot0x3"]
 
 [ext_resource type="Script" uid="uid://c234kx625ctwq" path="res://Buildings/architect_mode.gd" id="1_li5kh"]
-
-[sub_resource type="Gradient" id="Gradient_li5kh"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4ui3u"]
-gradient = SubResource("Gradient_li5kh")
+[ext_resource type="Texture2D" uid="uid://dssigfk0lmkst" path="res://Sprites/Placeholders/Wood Wall 32.png" id="2_einsr"]
 
 [node name="architect_mode" type="Node2D" unique_id=1233521065]
+process_mode = 4
+visible = false
 script = ExtResource("1_li5kh")
 metadata/_edit_group_ = true
 
 [node name="highlight" type="Sprite2D" parent="." unique_id=521003752]
-scale = Vector2(0.78124994, 0.78124994)
-texture = SubResource("GradientTexture2D_4ui3u")
+modulate = Color(0.21568628, 0.5764706, 1, 0.5254902)
+texture = ExtResource("2_einsr")
 centered = false
