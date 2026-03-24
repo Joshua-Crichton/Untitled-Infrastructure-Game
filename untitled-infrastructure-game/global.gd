@@ -1,6 +1,6 @@
 extends Node
 
-const grid_size_pixels = 50
+const grid_size_pixels = 32
 
 # Points to top left corner of grid tile
 func grid_2_coordinates(grid_coordinate: Vector2i ) -> Vector2:
