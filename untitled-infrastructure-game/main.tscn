@@ -10,3 +10,4 @@ script = ExtResource("1_h2yge")
 [node name="building" parent="." unique_id=1036368660 instance=ExtResource("3_h2yge")]
 
 [node name="architect_mode" parent="." unique_id=1233521065 instance=ExtResource("3_1bvp3")]
+process_mode = 4

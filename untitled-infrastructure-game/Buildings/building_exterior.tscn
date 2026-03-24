@@ -1,16 +1,10 @@
 [gd_scene format=3 uid="uid://bcqynn4u0edxv"]
 
 [ext_resource type="Script" uid="uid://b576gbl1x0cxp" path="res://Buildings/building_exterior.gd" id="1_3jjma"]
+[ext_resource type="Texture2D" uid="uid://dssigfk0lmkst" path="res://Sprites/Placeholders/Wood Wall 32.png" id="2_a4yd2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmxkj"]
-size = Vector2(50, 50)
-
-[sub_resource type="Gradient" id="Gradient_3jjma"]
-offsets = PackedFloat32Array(0, 0.52, 1)
-colors = PackedColorArray(0, 0, 0.8039216, 1, 0.52, 0.52, 0.90588236, 1, 0, 0, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_hgcaq"]
-gradient = SubResource("Gradient_3jjma")
+size = Vector2(32, 32)
 
 [node name="building_exterior" type="Area2D" unique_id=1270895379]
 collision_layer = 2
@@ -18,11 +12,12 @@ script = ExtResource("1_3jjma")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2084371671]
-position = Vector2(25, 25)
+position = Vector2(16, 16)
 shape = SubResource("RectangleShape2D_jmxkj")
 debug_color = Color(0.98186165, 0, 0.3714641, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=56485983]
-position = Vector2(24.999998, 25)
-scale = Vector2(0.78124994, 0.78125)
-texture = SubResource("GradientTexture2D_hgcaq")
+position = Vector2(24, 23.999998)
+texture = ExtResource("2_a4yd2")
+centered = false
+offset = Vector2(-24, -24)
