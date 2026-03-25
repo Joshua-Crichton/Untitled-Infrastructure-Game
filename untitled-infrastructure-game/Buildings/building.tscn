@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://cgyb1ty652enq"]
 
-[ext_resource type="Script" uid="uid://buoegsnc7qwpq" path="res://Buildings/building.gd" id="1_5j34s"]
+[ext_resource type="Script" uid="uid://pqchwwdhuwme" path="res://building.gd" id="1_gtvch"]
 
-[node name="building" type="CanvasGroup" unique_id=1036368660]
-script = ExtResource("1_5j34s")
+[node name="building" type="Node2D" unique_id=1710080596]
+script = ExtResource("1_gtvch")
+
+[node name="building_front_wall" type="CanvasGroup" parent="." unique_id=2034217551]
+
+[node name="building_always_visible" type="CanvasGroup" parent="." unique_id=513488691]
