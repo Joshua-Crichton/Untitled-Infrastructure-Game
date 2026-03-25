@@ -73,7 +73,5 @@ func update_building() -> void:
 		and maximum_y_value.keys()[0]!=building_parts.x \
 		and maximum_y_value.keys()[-1]!=building_parts.x:
 			building_parts_dict[building_parts].reparent($building_front_wall)
-			print(maximum_y_value.keys()[0])
-			print(building_parts.x)
 		else:
 			building_parts_dict[building_parts].reparent($building_always_visible)
