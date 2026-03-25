@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bqd5yfi5ds8rg" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://xnefov2ot0x3" path="res://Buildings/architect_mode.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cgyb1ty652enq" path="res://Buildings/building.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://5aaah5wb3re2" path="res://player.tscn" id="4_1bvp3"]
 
 [node name="main" type="Node" unique_id=144651200]
 script = ExtResource("1_h2yge")
@@ -10,4 +11,5 @@ script = ExtResource("1_h2yge")
 [node name="building" parent="." unique_id=1036368660 instance=ExtResource("3_h2yge")]
 
 [node name="architect_mode" parent="." unique_id=1233521065 instance=ExtResource("3_1bvp3")]
-process_mode = 4
+
+[node name="player" parent="." unique_id=1137493522 instance=ExtResource("4_1bvp3")]

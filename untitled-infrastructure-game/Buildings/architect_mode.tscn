@@ -7,9 +7,10 @@
 process_mode = 4
 visible = false
 script = ExtResource("1_li5kh")
-metadata/_edit_group_ = true
 
 [node name="highlight" type="Sprite2D" parent="." unique_id=521003752]
 modulate = Color(0.21568628, 0.5764706, 1, 0.5254902)
 texture = ExtResource("2_einsr")
 centered = false
+
+[node name="architect_camera" type="Camera2D" parent="." unique_id=1587951181]

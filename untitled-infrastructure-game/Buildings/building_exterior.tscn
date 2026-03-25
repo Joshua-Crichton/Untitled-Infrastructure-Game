@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bcqynn4u0edxv"]
 
-[ext_resource type="Script" uid="uid://b576gbl1x0cxp" path="res://Buildings/building_exterior.gd" id="1_3jjma"]
 [ext_resource type="Texture2D" uid="uid://dssigfk0lmkst" path="res://Sprites/Placeholders/Wood Wall 32.png" id="2_a4yd2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmxkj"]
@@ -8,7 +7,6 @@ size = Vector2(32, 32)
 
 [node name="building_exterior" type="Area2D" unique_id=1270895379]
 collision_layer = 2
-script = ExtResource("1_3jjma")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2084371671]
